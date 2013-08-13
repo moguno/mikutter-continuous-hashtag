@@ -99,18 +99,17 @@ Plugin.create :continuous_hashtag do
 
 
   settings "実況モード" do
-begin
-    boolean("ハッシュタグの前にスペースを挿入", :continuos_hashtag_space_before)
-    boolean("ハッシュタグの後にスペースを挿入", :continuos_hashtag_space_after)
-    boolean("ハッシュタグの前に改行を挿入", :continuos_hashtag_cr_before)
-    boolean("ハッシュタグの後に改行を挿入", :continuos_hashtag_cr_after)
-    select("カーソル位置", :continuos_hashtag_cursor_position, { 0 => "先頭", 1 => "末尾" })
-rescue => e
-puts e
-puts e.backtrace
-end
+    begin
+      boolean("ハッシュタグの前にスペースを挿入", :continuos_hashtag_space_before)
+      boolean("ハッシュタグの後にスペースを挿入", :continuos_hashtag_space_after)
+      boolean("ハッシュタグの前に改行を挿入", :continuos_hashtag_cr_before)
+      boolean("ハッシュタグの後に改行を挿入", :continuos_hashtag_cr_after)
+      select("カーソル位置", :continuos_hashtag_cursor_position, { 0 => "先頭", 1 => "末尾" })
+    rescue => e
+      puts e
+      puts e.backtrace
+    end
   end
-
 
 end
 
