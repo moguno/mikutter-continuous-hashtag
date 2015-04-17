@@ -4,11 +4,11 @@ Plugin.create :continuous_hashtag do
   window = nil
 
   on_boot do |service|
-    UserConfig[:continuos_hashtag_space_before] ||= false
-    UserConfig[:continuos_hashtag_space_after] ||= false
-    UserConfig[:continuos_hashtag_cr_before] ||= true
-    UserConfig[:continuos_hashtag_cr_after] ||= false
-    UserConfig[:continuos_hashtag_cursor_position] ||= 0
+    UserConfig[:continuos_hashtag_space_before] ||= false if UserConfig[:continuos_hashtag_space_before].nil?
+    UserConfig[:continuos_hashtag_space_after] ||= false if UserConfig[:continuos_hashtag_space_after].nil?
+    UserConfig[:continuos_hashtag_cr_before] ||= true if UserConfig[:continuos_hashtag_cr_before].nil?
+    UserConfig[:continuos_hashtag_cr_after] ||= false if UserConfig[:continuos_hashtag_cr_after].nil?
+    UserConfig[:continuos_hashtag_cursor_position] ||= 0 if UserConfig[:continuos_hashtag_cursor_position].nil?
   end
 
 
