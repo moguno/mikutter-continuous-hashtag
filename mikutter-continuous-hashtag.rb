@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-Plugin.create :continuous_hashtag do
+Plugin.create :"mikutter-continuous-hashtag" do
   window = nil
 
   on_boot do |service|
