@@ -5,7 +5,7 @@ depends:
   plugin:
   - gtk
   - settings
-version: '0.2'
+version: '0.0.2'
 author: 
 name: mikutter-continuous-hashtag
 description: 前回投稿したハッシュタグを保持します。
